@@ -1,4 +1,27 @@
-<section class="py-12 lg:py-32 max-w-[720px] opacity-85 px-8">
-    <h1 class="text-5xl font-bold">Hi, I'm Gerard Doncel</h1>
-    <p class="mt-4">Computer Engenieer, +1 years of PHP experience. Barcelona, Spain ES. Always exploring new tech stacks to build cool stuff.</p>
+---
+import LinkedInIcon from "../icons/LinkedInIcon.astro"
+import GitHubIcon from "../icons/GitHubIcon.astro"
+import ResumeIcon from "../icons/ResumeIcon.astro"
+---
+
+<section class="py-12 lg:py-32 max-w-5xl opacity-85 px-8 flex flex-wrap justify-center sm:flex-nowrap gap-x-10">
+    <img class="rounded-full w-36 h-36 mb-12" src="/avatar.png" alt="Gerard Doncel">
+    <aside>
+        <h1 class="text-5xl font-bold">Hi, I'm Gerard Doncel</h1>
+        <p class="my-4">Computer Engenieer, +1 years of PHP experience. Barcelona, Spain ES. Always exploring new tech stacks to build cool stuff.</p> 
+        <div class="flex gap-x-1">
+            <div class="flex gap-x-2 cursor-pointer hover:bg-gray-800 focus:outline-none font-medium rounded-xl text-sm px-4 py-2.5 me-2 mb-2 border-2 border-indigo-500">
+                <LinkedInIcon class="w-5 h-5" color="#fff"/>
+                <a target="_blank" href="https://www.linkedin.com/in/gerard-doncel-gutierrez/">LinkedIn</a>
+            </div>
+            <div class="flex gap-x-2 cursor-pointer hover:bg-gray-800 focus:outline-none font-medium rounded-xl text-sm px-4 py-2.5 me-2 mb-2 border-2 border-indigo-500">
+                <GitHubIcon class="w-5 h-5" color="#fff"/>
+                <a target="_blank" href="https://github.com/umigam3">GitHub</a>
+            </div>
+            <div class="flex gap-x-2 cursor-pointer hover:bg-gray-800 focus:outline-none font-medium rounded-xl text-sm px-4 py-2.5 me-2 mb-2 border-2 border-indigo-500">
+                <ResumeIcon class="w-5 h-5" color="#fff"/>
+                <a target="_blank" href="#">Resume</a>
+            </div>
+        </div>
+    </aside>
 </section>

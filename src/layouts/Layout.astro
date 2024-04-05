@@ -13,7 +13,7 @@ import '@fontsource-variable/onest';
 		<meta name="generator" content={Astro.generator} />
 		<title>Gerard Doncel - Full Stack Developer</title>
 	</head>
-	<body class="my-0 mx-auto">
+	<body class="my-0 mx-auto text-white">
 		<div class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 		<Header />
 		<slot />
@@ -21,10 +21,6 @@ import '@fontsource-variable/onest';
 </html>
 
 <style is:global>
-	:root {
-		color-scheme: light dark;
-	}
-
 	html {
 		font-family: 'Onest Variable', sans-serif;
 	}

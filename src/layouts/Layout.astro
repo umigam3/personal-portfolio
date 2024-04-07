@@ -15,7 +15,11 @@ import '@fontsource-variable/onest';
 		<title>Gerard Doncel - Full Stack Developer</title>
 	</head>
 	<body class="my-0 mx-auto text-white">
-		<div class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+		<!-- Gradient Background -->
+		<div class="fixed h-full w-full bg-slate-950">
+			<div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(124,58,237,.15),rgba(255,255,255,0))]"></div>
+			<div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(124,58,237,.15),rgba(255,255,255,0))]"></div>
+		</div>
 		<Header />
 		<slot />
 	</body>
@@ -24,5 +28,10 @@ import '@fontsource-variable/onest';
 <style is:global>
 	html {
 		font-family: 'Onest Variable', sans-serif;
+	}
+
+	::selection {
+		background: #6834C6;
+		color: #ffffff;
 	}
 </style>

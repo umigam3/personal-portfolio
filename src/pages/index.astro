@@ -1,10 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro'
+import ExperienceIcon from '../icons/ExperienceIcon.astro';
 ---
 
 <Layout>
-	<main class="mx-auto flex flex-col items-center max-w-5xl px-6">
+	<main class="mx-auto flex flex-col items-center max-w-5xl px-6 h-full">
 		<Hero />
+		<section class="relative">
+			<h2 class="opacity-80 font-semibold text-4xl mb-12 text-left md:text-center">Experience</h2>
+			<div>
+				<div class="absolute ml-6 md:ml-0 left-0 md:left-1/2 w-[3px] bg-yellow-500 transform -translate-x-1/2 h-full"></div>
+				<div class="relative w-full mb-6">
+					<div class="absolute bg-yellow-500 w-4 h-4 rounded-full top-0 left-0 md:left-1/2 transform -translate-x-1/2"></div>
+					<div class="relative ml-6 md:ml-0 md:w-[45%] md:text-right">
+						<h3>3&Punt</h3>
+						<span>Full Stack Developer</span>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id tempora, molestias quae, est consequuntur quas dolore ducimus totam nulla vero illum voluptatum nemo ipsa! Beatae possimus ipsum blanditiis a cum.</p>	
+					</div>
+				</div>
+				<div class="relative w-full mb-6">
+					<div class="absolute bg-yellow-500 w-4 h-4 rounded-full top-0 left-0 md:left-1/2 transform -translate-x-1/2"></div>
+					<div class="relative ml-6 md:ml-0 md:left-[55%] md:w-[45%]">
+						<h3>Namastech</h3>
+						<span>Full Stack Developer</span>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id tempora, molestias quae, est consequuntur quas dolore ducimus totam nulla vero illum voluptatum nemo ipsa! Beatae possimus ipsum blanditiis a cum.</p>	
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>

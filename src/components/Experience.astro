@@ -1,0 +1,24 @@
+---
+import ExperienceCard from "./ExperienceCard.astro";
+---
+
+<section class="mb-12">
+    <h2 id="experience" class="opacity-80 font-semibold text-4xl mb-8 text-left md:text-center">Experience</h2>
+    <div class="relative h-full">
+        <div class="absolute ml-2 md:ml-0 left-0 top-4 md:left-1/2 w-[3px] bg-yellow-500 transform -translate-x-1/2 h-full"></div>
+        <ExperienceCard 
+            date="Jan 2023 - Present"
+            position="Full Stack Developer"
+            company="3&Punt"
+            description="Developing quality Moodle plugins and integrations. Utilizing technologies to enhance the Moodle e-learning experience. Collaborating with clients, I analyze requirements to craft optimal solutions and ensure smooth integration."
+            side="left"
+        /> 
+        <ExperienceCard 
+            date="Apr 2022 - Sep 2022"
+            position="Web Developer"
+            company="Namastech"
+            description="Fixing general bugs of their web application. (4DMOVIN) Development of small tools to imporve web utility. Building WordPress sites, including landing pages, working with woo-commerce."
+            side="right"
+        />
+    </div>
+</section>

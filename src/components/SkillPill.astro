@@ -1,6 +1,7 @@
 ---
 interface Props {
     width: string,
+    height: string,
     color: string,
     source: string,
     skill: string
@@ -10,6 +11,6 @@ const { width, color, source, skill } = Astro.props;
 ---
 
 <div class=`bg-${color}-500/30 flex items-center gap-x-2 focus:outline-none font-medium rounded-2xl text-sm px-2 py-1 me-2 mb-2 border-[1px] border-slate-500/20`>
-    <img class=`w-${width}` src={source}/>
+    <img class=`w-${width} h-${height}` src={source}/>
     <span>{skill}</span>
 </div>

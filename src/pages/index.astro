@@ -3,10 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro'
 import Experience from '../components/Experience.astro';
 import ExperienceCard from '../components/ExperienceCard.astro';
+import SkillPill from '../components/SkillPill.astro';
+import PhpSVG from '../assets/php.svg';
+import AngularSVG from '../assets/angular.svg';
+import TypeScriptSVG from '../assets/typescript.svg';
+import JavaScriptSVG from '../assets/javascript.svg';
+import HtmlSVG from '../assets/html.svg';
+import CssSVG from '../assets/css.svg';
+import WordPressSVG from '../assets/wordpress.svg';
+import SqlSVG from '../assets/sql.svg';
 ---
 
 <Layout>
-	<main class="mx-auto flex flex-col items-center max-w-5xl px-6 h-full">
+	<main class="mx-auto flex flex-col max-w-5xl px-6 h-full">
 		<Hero />
 		<Experience>
 			<ExperienceCard 
@@ -14,15 +23,33 @@ import ExperienceCard from '../components/ExperienceCard.astro';
 				position="Full Stack Developer"
 				company="3&Punt"
 				description="Developing quality Moodle plugins and integrations. Utilizing technologies to enhance the Moodle e-learning experience. Collaborating with clients, I analyze requirements to craft optimal solutions and ensure smooth integration."
-				side="left"
-        	/> 
+				side="left"> 
+				<div class="flex flex-wrap justify-start md:justify-end">
+					<SkillPill width=4 color='indigo' source={PhpSVG.src} skill="PHP" />
+					<SkillPill width=4 color='yellow' source={JavaScriptSVG.src} skill="JavaScript" />
+					<SkillPill width=3 color='orange' source={HtmlSVG.src} skill="HTML" />
+					<SkillPill width=3 color='sky' source={CssSVG.src} skill="CSS" />
+					<SkillPill width=4 color='slate' source={SqlSVG.src} skill="MySQL" />
+				</div>
+			</ExperienceCard>
         	<ExperienceCard 
 				date="Apr 2022 - Sep 2022"
 				position="Web Developer"
 				company="Namastech"
 				description="Fixing general bugs of their web application. (4DMOVIN) Development of small tools to imporve web utility. Building WordPress sites, including landing pages, working with woo-commerce."
-				side="right"
-        	/>
+				side="right">
+				<div class="flex flex-wrap justify-start">
+					<SkillPill width=4 color='indigo' source={PhpSVG.src} skill="PHP" />
+					<SkillPill width=5 color='red' source={AngularSVG.src} skill="Angular" />
+					<SkillPill width=4 color='blue' source={TypeScriptSVG.src} skill="TypeScript" />
+					<SkillPill width=3 color='orange' source={HtmlSVG.src} skill="HTML" />
+					<SkillPill width=3 color='sky' source={CssSVG.src} skill="CSS" />
+					<SkillPill width=4 color='cyan' source={WordPressSVG.src} skill="Wordpress" />
+					<SkillPill width=4 color='slate' source={SqlSVG.src} skill="MySQL" />
+				</div>
+			</ExperienceCard>
 		</Experience>
+		<h2 id="projects" class="opacity-85 font-medium text-2xl text-left md:text-center mb-8">P R O J E C T S</h2>    
+		
 	</main>
 </Layout>

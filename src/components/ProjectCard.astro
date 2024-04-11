@@ -1,0 +1,21 @@
+---
+interface Props {
+    title: string,
+    source: string,
+    description: string
+}
+
+const { title, source, description } = Astro.props;
+---
+
+<section class="flex flex-col sm:flex-row sm:mb-4 mb-10">
+    <div class="sm:p-4 sm:w-1/2 mb-6 sm:mb-0">
+        <img class="rounded-2xl" src={source}>
+    </div>
+    <div class="flex flex-col sm:w-1/2 sm:p-4">
+        <h2 class="opacity-85 text-2xl font-semibold mb-3">{title}</h2>
+        <slot name="skills"/>	
+        <p class="text-base mb-4 text-gray-400 dark:text-gray-400">{description}</p>
+        <slot name="buttons"/>	
+    </div>
+</section>

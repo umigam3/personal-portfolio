@@ -1,17 +1,31 @@
 ---
+// Components
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro'
 import Experience from '../components/Experience.astro';
 import ExperienceCard from '../components/ExperienceCard.astro';
 import SkillPill from '../components/SkillPill.astro';
-import PhpSVG from '../assets/php.svg';
-import AngularSVG from '../assets/angular.svg';
-import TypeScriptSVG from '../assets/typescript.svg';
-import JavaScriptSVG from '../assets/javascript.svg';
-import HtmlSVG from '../assets/html.svg';
-import CssSVG from '../assets/css.svg';
-import WordPressSVG from '../assets/wordpress.svg';
-import SqlSVG from '../assets/sql.svg';
+import Projects from '../components/Projects.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+// Icons
+import PhpIcon from '../icons/PHPIcon.astro';
+import AngularIcon from '../icons/AngularIcon.astro';
+import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
+import JavaScriptIcon from '../icons/JavaScriptIcon.astro';
+import HtmlIcon from '../icons/HTMLIcon.astro';
+import CssIcon from '../icons/CSSIcon.astro';
+import WordPressIcon from '../icons/WordPressIcon.astro';
+import SqlIcon from '../icons/SQLIcon.astro';
+
+// Images
+import PokedexImage from '../assets/img/pokedex-project.png'
+import NetlifyIcon from '../icons/NetlifyIcon.astro';
+import ReactIcon from '../icons/ReactIcon.astro';
+import Button from '../components/Button.astro';
+import PreviewIcon from '../icons/PreviewIcon.astro';
+import SourceIcon from '../icons/SourceIcon.astro';
+import AboutMe from '../components/AboutMe.astro';
 ---
 
 <Layout>
@@ -25,11 +39,21 @@ import SqlSVG from '../assets/sql.svg';
 				description="Developing quality Moodle plugins and integrations. Utilizing technologies to enhance the Moodle e-learning experience. Collaborating with clients, I analyze requirements to craft optimal solutions and ensure smooth integration."
 				side="left"> 
 				<div class="flex flex-wrap justify-start md:justify-end">
-					<SkillPill width=4 height=4 color='bg-indigo-500/30' source={PhpSVG.src} skill="PHP" />
-					<SkillPill width=4 height=4 color='bg-yellow-500/30' source={JavaScriptSVG.src} skill="JavaScript" />
-					<SkillPill width=3 height=4 color='bg-orange-500/30' source={HtmlSVG.src} skill="HTML" />
-					<SkillPill width=3 height=4 color='bg-sky-500/30' source={CssSVG.src} skill="CSS" />
-					<SkillPill width=4 height=4 color='bg-slate-500/30' source={SqlSVG.src} skill="MySQL" />
+					<SkillPill color='bg-indigo-500/30' skill="PHP">
+						<PhpIcon class="w-4 h-4"/>
+					</SkillPill>
+					<SkillPill color='bg-yellow-500/30' skill="JavaScript" >
+						<JavaScriptIcon class="w-4 h-4"/>
+					</SkillPill>
+					<SkillPill color='bg-orange-500/30' skill="HTML" >
+						<HtmlIcon class="w-3 h-4"/>
+					</SkillPill>
+					<SkillPill color='bg-sky-500/30' skill="CSS">
+						<CssIcon class="w-3 h-4"></Css>
+					</SkillPill>
+					<SkillPill color='bg-slate-500/30' skill="MySQL" >
+						<SqlIcon class="w-4 h-4"/>
+					</SkillPill>
 				</div>
 			</ExperienceCard>
         	<ExperienceCard 
@@ -39,17 +63,53 @@ import SqlSVG from '../assets/sql.svg';
 				description="Fixing general bugs of their web application. (4DMOVIN) Development of small tools to imporve web utility. Building WordPress sites, including landing pages, working with woo-commerce."
 				side="right">
 				<div class="flex flex-wrap justify-start">
-					<SkillPill width=4 height=4 color='bg-indigo-500/30' source={PhpSVG.src} skill="PHP" />
-					<SkillPill width=5 height=5 color='bg-red-500/30' source={AngularSVG.src} skill="Angular" />
-					<SkillPill width=4 height=4 color='bg-blue-500/30' source={TypeScriptSVG.src} skill="TypeScript" />
-					<SkillPill width=3 height=4 color='bg-orange-500/30' source={HtmlSVG.src} skill="HTML" />
-					<SkillPill width=3 height=4 color='bg-sky-500/30' source={CssSVG.src} skill="CSS" />
-					<SkillPill width=4 height=4 color='bg-cyan-500/30' source={WordPressSVG.src} skill="Wordpress" />
-					<SkillPill width=4 height=4 color='bg-slate-500/30' source={SqlSVG.src} skill="MySQL" />
+					<SkillPill color='bg-indigo-500/30' skill="PHP">
+						<PhpIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-red-500/30' skill="Angular" >
+						<AngularIcon class="w-5 h-5" />
+					</SkillPill>
+					<SkillPill color='bg-blue-500/30' skill="TypeScript" >
+						<TypeScriptIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-orange-500/30' skill="HTML" >
+						<HtmlIcon class="w-3 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-sky-500/30' skill="CSS">
+						<CssIcon class="w-3 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-cyan-500/30' skill="WordPress" >
+						<WordPressIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-slate-500/30' skill="MySQL" >
+						<SqlIcon class="w-4 h-4" />
+					</SkillPill>					
 				</div>
 			</ExperienceCard>
 		</Experience>
-		<h2 id="projects" class="opacity-85 font-medium text-2xl text-left md:text-center mb-8 tracking-[.5rem]">PROJECTS</h2>    
-		
+		<Projects>
+			<ProjectCard title='PokéDex App' source={PokedexImage.src} description='Simple Pokedex application built using React. It utilizes the PokeAPI to fetch and display information about Pokémon, providing features like displaying Pokémon, loading more Pokémon, searching, and more. Additionally, the app offers both dark and light modes for user preference.'>
+				<div slot="skills" class="flex flex-wrap mb-2">
+					<SkillPill color='bg-blue-500/30' skill="React">
+						<ReactIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-yellow-500/30' skill="JavaScript" >
+						<JavaScriptIcon class="w-4 h-4"/>
+					</SkillPill>
+					<SkillPill color='bg-emerald-500/30' skill="Netlify" >
+						<NetlifyIcon class="w-4 h-4" />
+					</SkillPill>	
+				</div>
+				<div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
+					<Button href="https://github.com/umigam3/pokedex-api" label="Source Code">
+						<SourceIcon class="w-4 h-4"></SourceIcon>
+					</Button>
+					<Button href="https://pokeindex-app.netlify.app/" label="Preview">
+						<PreviewIcon class="w-4 h-4"></PreviewIcon>
+					</Button>		
+				</div>
+			</ProjectCard>
+		</Projects>
+		<AboutMe />
 	</main>
 </Layout>

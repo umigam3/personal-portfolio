@@ -2,24 +2,24 @@
 import LinkedInIcon from "../icons/LinkedInIcon.astro"
 import GitHubIcon from "../icons/GitHubIcon.astro"
 import ResumeIcon from "../icons/ResumeIcon.astro"
-import SocialButton from "./SocialButton.astro"
+import Button from "./Button.astro"
 ---
 
 <section class="py-12 opacity-85">
     <section>
         <span class="text-4xl font-bold opacity-90 mb-1 block">Hi, I'm</span>
-        <h1 class="text-7xl md:text-8xl font-bold bg-gradient-to-r from-violet-500 to-violet-800 inline-block text-transparent bg-clip-text mb-4">Gerard <span class="hidden md:inline">Doncel</span></h1>
+        <h1 class="text-8xl font-bold bg-gradient-to-r from-violet-500 to-violet-800 inline-block text-transparent bg-clip-text mb-4">Gerard Doncel</h1>
         <p class="text-lg sm:text-xl mb-5">Computer Engenieer, <span class="text-yellow-500 font-semibold">+2 years of PHP experience. </span>Barcelona, Spain 🇪🇸. Always exploring new tech stacks to build cool stuff.</p> 
         <div class="flex flex-wrap sm:flex-nowrap gap-x-1">
-            <SocialButton href="https://www.linkedin.com/in/gerard-doncel-gutierrez/" label="LinkedIn">
-                <LinkedInIcon class="w-5 h-5" color="#fff"/>
-            </SocialButton>
-            <SocialButton href="https://github.com/umigam3" label="GitHub">
-                <GitHubIcon class="w-5 h-5" color="#fff"/>
-            </SocialButton>
-            <SocialButton href="#" label="Resume">
-                <ResumeIcon class="w-5 h-5" color="#fff"/>
-            </SocialButton>
+            <Button href="https://www.linkedin.com/in/gerard-doncel-gutierrez/" label="LinkedIn">
+                <LinkedInIcon class="w-4 h-4" color="#FFF"/>
+            </Button>
+            <Button href="https://github.com/umigam3" label="GitHub">
+                <GitHubIcon class="w-5 h-5" color="#FFF"/>
+            </Button>
+            <Button href="#" label="Resume">
+                <ResumeIcon class="w-5 h-5" color="#FFF"/>
+            </Button>
         </div>
     </section>
 </section>

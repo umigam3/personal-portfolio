@@ -10,7 +10,7 @@ const { title, source, description } = Astro.props;
 
 <section class="flex flex-col sm:flex-row sm:mb-4 mb-1">
     <div class="sm:p-4 sm:w-1/2 mb-6 sm:mb-0">
-        <img class="rounded-2xl" src={source}>
+        <img class="rounded-2xl" src={source} alt={title}>
     </div>
     <div class="flex flex-col sm:w-1/2 sm:p-4">
         <h2 class="opacity-85 text-2xl font-semibold mb-3">{title}</h2>

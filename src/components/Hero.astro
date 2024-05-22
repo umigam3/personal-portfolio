@@ -7,21 +7,42 @@ import Carousel from "./Carousel.astro"
 ---
 
 <section class="pt-12">
-    <section class="mb-12 opacity-85">
-        <span class="text-4xl font-bold opacity-90 mb-1 block">Hi, I'm</span>
-        <h1 class="text-7xl sm:text-8xl font-bold bg-gradient-to-r from-violet-500 to-violet-800 inline-block text-transparent bg-clip-text mb-4">Gerard Doncel</h1>
-        <p class="text-lg sm:text-xl mb-5">Computer Engineer, <span class="text-yellow-500 font-semibold">+2 years of PHP experience. </span>Barcelona, Spain 🇪🇸. Always exploring new tech stacks to build cool stuff.</p> 
-        <div class="flex flex-wrap sm:flex-nowrap gap-x-1">
-            <Button href="https://www.linkedin.com/in/gerard-doncel-gutierrez/" label="LinkedIn">
-                <LinkedInIcon class="w-4 h-4" color="#FFF"/>
-            </Button>
-            <Button href="https://github.com/umigam3" label="GitHub">
-                <GitHubIcon class="w-5 h-5" color="#FFF"/>
-            </Button>
-            <Button href="resume.pdf" label="Resume">
-                <ResumeIcon class="w-5 h-5" color="#FFF"/>
-            </Button>
-        </div>
-    </section>
+    <div class="flex flex-col md:flex-row mb-8 sm:mb-16">
+        <section class="w-full md:w-1/2">
+            <span class="text-4xl font-bold text-gray-200 mb-1 block">Hi, I'm</span>
+            <h1 class="text-7xl sm:text-6xl font-bold bg-gradient-to-r from-violet-500 to-violet-800 inline-block text-transparent bg-clip-text mb-4">Gerard Doncel</h1>
+            <p class="text-normal sm:text-lg mb-5 text-gray-200">Computer Engineer, <span class="text-yellow-500 font-semibold">+2 years of PHP experience. </span>Barcelona, Spain 🇪🇸.</p> 
+            <p class="text-normal sm:text-lg mb-5 text-gray-200">
+                Currently <span class="text-yellow-500 font-semibold">working with Spain's first Moodle Premium Partner 3iPunt</span>, developing crucial plugins for well-known clients in the e-learning industry.
+            </p>    
+            <div class="flex flex-wrap sm:flex-nowrap gap-x-1">
+                <Button href="https://www.linkedin.com/in/gerard-doncel-gutierrez/" label="LinkedIn">
+                    <LinkedInIcon class="w-4 h-4" color="#FFF"/>
+                </Button>
+                <Button href="https://github.com/umigam3" label="GitHub">
+                    <GitHubIcon class="w-5 h-5" color="#FFF"/>
+                </Button>
+                <Button href="resume.pdf" label="Resume">
+                    <ResumeIcon class="w-5 h-5" color="#FFF"/>
+                </Button>
+            </div>
+        </section>
+        <section class="w-full md:w-1/2 flex justify-center pl-10 py-4 md:py-0">
+            <img class="w-96 md:w-full hero-image " src="hero.png">      
+        </section>    
+    </div>
     <Carousel />
 </section>
+
+<style>
+    .hero-image {
+        --f : 100px; /* control the fading */
+
+        -webkit-mask:
+            radial-gradient(at 0 0,#000,#0000 70%) 100% 100%/var(--f) var(--f),
+            linear-gradient( 90deg,#000,#0000) 100% 0/var(--f) calc(100% - var(--f)),
+            linear-gradient(180deg,#000,#0000) 0 100%/calc(100% - var(--f)) var(--f),
+            linear-gradient(#000 0 0) 0 0/calc(100% - var(--f)) calc(100% - var(--f));
+        -webkit-mask-repeat: no-repeat;
+  }
+</style>

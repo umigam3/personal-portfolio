@@ -18,10 +18,10 @@ const { date, position, company, description, side } = Astro.props;
                 : 
                 "md:w-[47.5%] md:text-right md:border-l-violet-500/50 md:border-l-[1px] md:border-r-0 border-l-0 border-r-violet-500/50 border-r-[1px]"
             }`}>
-        <span class="block mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{date}</span>
-        <span class="text-yellow-500 text-lg font-semibold mb-1">{position}</span>
-        <h3 class="text-base font-normal mb-1 ">{company}</h3>
-        <p class="text-sm mb-2 text-gray-400 dark:text-gray-400">{description}</p>
+        <span class="block mb-1 text-sm font-light leading-none text-gray-400 dark:text-gray-500">{date}</span>
+        <span class="text-yellow-500 text-lg font-bold mb-1">{position}</span>
+        <h3 class="text-base font-semibold mb-1 text-gray-200">{company}</h3>
+        <p class="text-base mb-2 text-gray-400 dark:text-gray-400">{description}</p>
         <slot />
     </div>
     </div>

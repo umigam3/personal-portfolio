@@ -21,7 +21,11 @@ export default {
 				'0%': { transform: 'scale(1.05)' },
 				'100%': { transform: 'scale(1)' },
 			  },
-			}                
+			},
+			colors: {
+				'primary': '#A587E6',
+				'secondary': '#F7C36E'
+			}         
 		},
 	},
 	plugins: [

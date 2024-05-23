@@ -6,15 +6,20 @@ import Button from "./Button.astro"
 import Carousel from "./Carousel.astro"
 ---
 
-<section class="pt-12">
-    <div class="flex flex-col md:flex-row mb-8 sm:mb-16">
-        <section class="w-full md:w-1/2 flex flex-col justify-center">
-            <span class="text-4xl font-bold text-gray-200 mb-1 block">Hi, I'm</span>
-            <h1 class="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-violet-500 to-violet-800 inline-block text-transparent bg-clip-text mb-4">Gerard Doncel</h1>
-            <p class="text-normal sm:text-lg mb-5 text-gray-200">Computer Engineer, <span class="text-yellow-500 font-semibold">+2 years of PHP experience. </span>Barcelona, Spain 🇪🇸.</p> 
-            <p class="text-normal sm:text-lg mb-5 text-gray-200">
-                Currently <span class="text-yellow-500 font-semibold">working with Spain's first Moodle Premium Partner 3iPunt</span>, developing crucial plugins for well-known clients in the e-learning industry.
-            </p>    
+<section class="md:pt-12 pt-4">
+    <div class="relative flex flex-col md:flex-row mb-5 md:mb-52">
+        <section class="md:absolute flex justify-center md:pl-10 md:pb-4 md:py-0 right-3 top-0">
+            <img class="z-10 w-80 md:w-[485px] hero-image " src="hero-2.png">      
+        </section>  
+        <section class="w-full md:w-2/3 flex flex-col justify-center md:mt-0 -mt-14 md:z-10">
+            <h1 class="md:leading-tight md:text-6xl text-4xl font-extrabold bg-gradient-to-r from-violet-500 to-violet-800 inline-block text-transparent bg-clip-text mb-4">
+                Hello! I'm
+                Gerard Doncel a
+                <span class="text-yellow-500 font-extrabold">Computer Engineer</span>
+                with more than <span class="text-yellow-500 font-extrabold">2 years
+                </span> in <span class="text-yellow-500 font-extrabold">web development
+                </span> and solid skills in <span class="text-yellow-500 font-extrabold">PHP</span>
+            </h1>
             <div class="flex flex-wrap sm:flex-nowrap gap-x-1">
                 <Button href="https://www.linkedin.com/in/gerard-doncel-gutierrez/" label="LinkedIn">
                     <LinkedInIcon class="w-4 h-4" color="#FFF"/>
@@ -26,10 +31,7 @@ import Carousel from "./Carousel.astro"
                     <ResumeIcon class="w-5 h-5" color="#FFF"/>
                 </Button>
             </div>
-        </section>
-        <section class="w-full md:w-1/2 flex justify-center pl-10 py-4 md:py-0">
-            <img class="w-80 md:w-96 hero-image " src="hero-2.png">      
-        </section>    
+        </section>  
     </div>
     <Carousel />
 </section>

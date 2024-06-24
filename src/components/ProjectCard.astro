@@ -3,19 +3,17 @@ interface Props {
     title: string,
     source: string,
     description: string,
-    href: string
 }
 
-const { title, source, description, href } = Astro.props;
+const { title, source, description } = Astro.props;
 ---
 
-<section class="flex flex-col mb-4 md:w-[47.5%] mw-[47.5%] bg-black/20 rounded-xl">
+<div class="flex flex-col mb-4 md:w-[47.5%] mw-[47.5%] bg-black/20 rounded-xl">
     <div class="mb-2 md:mb-0 overflow-hidden rounded-t-xl">
-        <a href={href} target="_blank"><img 
-			class="hover:animate-zoomIn hover:cursor-pointer" 
+        <img 
+			class="hover:sm:animate-zoomIn hover:sm:cursor-pointer" 
             src={source} 
             alt={title}>
-        </a>
     </div>
     
     <div class="flex flex-col px-6 py-4">
@@ -24,4 +22,4 @@ const { title, source, description, href } = Astro.props;
         <p class="text-base mb-4 text-gray-400 dark:text-gray-400">{description}</p>
         <slot name="buttons"/>	
     </div>
-</section>
+</div>

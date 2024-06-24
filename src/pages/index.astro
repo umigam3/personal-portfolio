@@ -1,6 +1,7 @@
 ---
 // Components
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro'
 import Experience from '../components/Experience.astro';
 import ExperienceCard from '../components/ExperienceCard.astro';
@@ -34,6 +35,7 @@ import LinuxIcon from '../icons/LinuxIcon.astro';
 ---
 
 <Layout>
+	<Header />
 	<main class="mx-auto flex flex-col max-w-6xl px-6 h-full">
 		<Hero />
 		<Experience>
@@ -96,7 +98,7 @@ import LinuxIcon from '../icons/LinuxIcon.astro';
 			</ExperienceCard>
 		</Experience>
 		<Projects>
-			<ProjectCard title='PokéDex App' href="#" source={PokedexImage.src} description="Simple Pokedex application built using React. It utilizes the PokeAPI to fetch and display information about Pokémon, providing features like displaying Pokémon, loading more Pokémon, searching, and more. Additionally, the app offers both dark and light modes for user preference.">
+			<ProjectCard title='PokéDex App' source={PokedexImage.src} description="Simple Pokedex application built using React. It utilizes the PokeAPI to fetch and display information about Pokémon, providing features like displaying Pokémon, loading more Pokémon, searching, and more. Additionally, the app offers both dark and light modes for user preference.">
 				<div slot="skills" class="flex flex-wrap mb-2">
 					<SkillPill color='bg-blue-500/30' skill="React">
 						<ReactIcon class="w-4 h-4" />
@@ -117,7 +119,7 @@ import LinuxIcon from '../icons/LinuxIcon.astro';
 					</Button>		
 				</div>
 			</ProjectCard>
-			<ProjectCard title='UNIX System Scripts' href="#" source={ScriptsImage.src} description="Collection of Bash scripts designed to enhance system administration and user management tasks on Unix-like systems. These scripts aim to automate various aspects of system monitoring, user behavior analysis, and resource utilization management.">
+			<ProjectCard title='UNIX System Scripts' source={ScriptsImage.src} description="Collection of Bash scripts designed to enhance system administration and user management tasks on Unix-like systems. These scripts aim to automate various aspects of system monitoring, user behavior analysis, and resource utilization management.">
 				<div slot="skills" class="flex flex-wrap mb-2">
 					<SkillPill color='bg-slate-500/30' skill="Bash">
 						<BashIcon class="w-4 h-4" />
@@ -137,3 +139,31 @@ import LinuxIcon from '../icons/LinuxIcon.astro';
 		<Footer/>
 	</main>
 </Layout>
+
+<script>
+	document.addEventListener("touchstart", function() {}, true);
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const sections = document.querySelectorAll('section');
+		const navLinks = document.querySelectorAll('nav a');
+
+		function onScroll() {
+			let currentSection: string | null = '';
+			sections.forEach(section => {
+				const sectionTop = section.offsetTop;
+				if (window.scrollY >= sectionTop - 200) {
+					currentSection = section.getAttribute('id');
+				}
+			});
+
+			navLinks.forEach(link => {
+				link.classList.remove('text-secondary', 'scale-105', 'opacity-100', 'font-semibold');
+				if (link.getAttribute('href') === `#${currentSection}`) {
+					link.classList.add('text-secondary', 'scale-105', 'opacity-100', 'font-semibold');
+				}
+			});
+		}
+
+		window.addEventListener('scroll', onScroll);
+	});
+</script>

@@ -25,7 +25,7 @@ export default {
 			colors: {
 				'primary': '#A587E6',
 				'secondary': '#F7C36E'
-			}         
+			}
 		},
 	},
 	plugins: [

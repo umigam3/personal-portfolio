@@ -8,10 +8,11 @@ export default {
 			  'zoomIn': 'zoomIn 0.2s ease-in forwards',
 			  'zoomOut': 'zoomOut 0.2s ease-out forwards',
 			  'slidein': "slidein 1s ease forwards",
-			  'slidein200': "slidein 1s ease 100ms forwards ",
-			  'slidein300': "slidein 1s ease 200ms forwards ",
-			  'slidein400': "slidein 1s ease 300ms forwards ",
-			  'slidein500': "slidein 1s ease 400ms forwards ",
+			  'slidein100': "slidein 1s ease 100ms forwards",
+			  'slidein200': "slidein 1s ease 200ms forwards",
+			  'slidein300': "slidein 1s ease 300ms forwards",
+			  'slidein400': "slidein 1s ease 400ms forwards",
+			  'slidein500': "slidein 1s ease 400ms forwards",
 			},
 			keyframes: {
 			  'infinite-scroll': {

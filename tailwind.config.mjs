@@ -7,6 +7,11 @@ export default {
 			  'infinite-scroll': 'infinite-scroll 15s linear infinite',
 			  'zoomIn': 'zoomIn 0.2s ease-in forwards',
 			  'zoomOut': 'zoomOut 0.2s ease-out forwards',
+			  'slidein': "slidein 1s ease forwards",
+			  'slidein200': "slidein 1s ease 100ms forwards ",
+			  'slidein300': "slidein 1s ease 200ms forwards ",
+			  'slidein400': "slidein 1s ease 300ms forwards ",
+			  'slidein500': "slidein 1s ease 400ms forwards ",
 			},
 			keyframes: {
 			  'infinite-scroll': {
@@ -14,13 +19,23 @@ export default {
 				to: { transform: 'translateX(-100%)' },
 			  },
 			  'zoomIn': {
-				'0%': { transform: 'scale(1)' },
-				'100%': { transform: 'scale(1.05)' },
+				from: { transform: 'scale(1)' },
+				to: { transform: 'scale(1.05)' },
 			  },
 			  'zoomOut': {
-				'0%': { transform: 'scale(1.05)' },
-				'100%': { transform: 'scale(1)' },
+				from: { transform: 'scale(1.05)' },
+				to: { transform: 'scale(1)' },
 			  },
+			  'slidein': {
+				from: {
+				  opacity: '0',
+				  transform: 'translateY(-20px)',
+				},
+				to: {
+				  opacity: '1',
+				  transform: 'translateY(0)',
+				},
+			  },	  
 			},
 			colors: {
 				'primary': '#A587E6',

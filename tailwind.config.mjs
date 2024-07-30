@@ -5,8 +5,8 @@ export default {
 		extend: {
 			animation: {
 			  'infinite-scroll': 'infinite-scroll 15s linear infinite',
-			  'zoomIn': 'zoomIn 0.2s ease-in forwards',
-			  'zoomOut': 'zoomOut 0.2s ease-out forwards',
+			  'zoomIn': 'zoomIn 0.2s ease-out forwards',
+			  'zoomOut': 'zoomOut 0.3s ease-out forwards',
 			  'slidein': "slidein 1s ease forwards",
 			  'slidein100': "slidein 1s ease 100ms forwards",
 			  'slidein200': "slidein 1s ease 200ms forwards",

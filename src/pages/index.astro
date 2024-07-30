@@ -19,10 +19,13 @@ import HtmlIcon from '../icons/HTMLIcon.astro';
 import CssIcon from '../icons/CSSIcon.astro';
 import WordPressIcon from '../icons/WordPressIcon.astro';
 import SqlIcon from '../icons/SQLIcon.astro';
+import NextIcon from '../icons/NextIcon.astro';
+
 
 // Images
 import PokedexImage from '../assets/img/pokedex-project.png'
 import ScriptsImage from '../assets/img/unix-system-scripts.png'
+import AllToolsDev from '../assets/img/586shots_so.png'
 import ViteIcon from '../icons/ViteIcon.astro';
 import ReactIcon from '../icons/ReactIcon.astro';
 import Button from '../components/Button.astro';
@@ -98,7 +101,7 @@ import LinuxIcon from '../icons/LinuxIcon.astro';
 			</ExperienceCard>
 		</Experience>
 		<Projects>
-			<ProjectCard title='PokéDex App' source={PokedexImage.src} description="Simple Pokedex application built using React. It utilizes the PokeAPI to fetch and display information about Pokémon, providing features like displaying Pokémon, loading more Pokémon, searching, and more. Additionally, the app offers both dark and light modes for user preference.">
+			<ProjectCard title='PokéDex App' source={PokedexImage.src} description="Simple Pokedex application built using React. It utilizes the PokeAPI to fetch and display Pokémon information.">
 				<div slot="skills" class="flex flex-wrap mb-2">
 					<SkillPill color='bg-blue-500/30' skill="React">
 						<ReactIcon class="w-4 h-4" />
@@ -119,7 +122,7 @@ import LinuxIcon from '../icons/LinuxIcon.astro';
 					</Button>		
 				</div>
 			</ProjectCard>
-			<ProjectCard title='UNIX System Scripts' source={ScriptsImage.src} description="Collection of Bash scripts designed to enhance system administration and user management tasks on Unix-like systems. These scripts aim to automate various aspects of system monitoring, user behavior analysis, and resource utilization management.">
+			<ProjectCard title='UNIX System Scripts' source={ScriptsImage.src} description="Collection of Bash scripts designed to enhance system administration and user management tasks on Unix-like systems.">
 				<div slot="skills" class="flex flex-wrap mb-2">
 					<SkillPill color='bg-slate-500/30' skill="Bash">
 						<BashIcon class="w-4 h-4" />
@@ -131,6 +134,24 @@ import LinuxIcon from '../icons/LinuxIcon.astro';
 				<div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
 					<Button href="https://github.com/umigam3/unix-system-scripts" label="Source Code">
 						<SourceIcon class="w-4 h-4"></SourceIcon>
+					</Button>
+				</div>
+			</ProjectCard>
+			<ProjectCard title='Developer Tools' source={AllToolsDev.src} description="A collection of coding tools designed to simplify developers lives and boost productivity.">
+				<div slot="skills" class="flex flex-wrap mb-2">
+					<SkillPill color='bg-slate-500/0' skill="Next JS" >
+						<NextIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-yellow-500/30' skill="Javascript">
+						<JavaScriptIcon class="w-4 h-4" />
+					</SkillPill>	
+				</div>
+				<div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
+					<Button href="https://github.com/umigam3/dev-tools" label="Source Code">
+						<SourceIcon class="w-4 h-4"></SourceIcon>
+					</Button>
+					<Button href="https://alltoolsdev.netlify.app/" label="Preview">
+						<PreviewIcon class="w-4 h-4"></PreviewIcon>
 					</Button>
 				</div>
 			</ProjectCard>

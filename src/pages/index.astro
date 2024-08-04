@@ -36,9 +36,9 @@ import AboutMe from '../components/AboutMe.astro';
 			});
 
 			navLinks.forEach(link => {
-				link.classList.remove('text-secondary', 'scale-105', 'opacity-100', 'font-semibold');
+				link.classList.remove('text-secondary', 'scale-105', 'sm:opacity-100', 'font-semibold');
 				if (link.getAttribute('href') === `#${currentSection}`) {
-					link.classList.add('text-secondary', 'scale-105', 'opacity-100', 'font-semibold');
+					link.classList.add('text-secondary', 'scale-105', 'sm:opacity-100', 'font-semibold');
 				}
 			});
 		}

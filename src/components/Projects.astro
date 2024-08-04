@@ -1,6 +1,84 @@
+---
+// Components
+import ProjectCard from '../components/ProjectCard.astro';
+import SkillPill from '../components/SkillPill.astro';
+
+// Icons
+import JavaScriptIcon from '../icons/JavaScriptIcon.astro';
+import NextIcon from '../icons/NextIcon.astro';
+
+
+// Images
+import PokedexImage from '../assets/img/pokedex-project.webp'
+import ScriptsImage from '../assets/img/unix-system-scripts.webp'
+import AllToolsDevImage from '../assets/img/all-tools-dev.webp'
+
+// Icons
+import ViteIcon from '../icons/ViteIcon.astro';
+import ReactIcon from '../icons/ReactIcon.astro';
+import Button from '../components/Button.astro';
+import PreviewIcon from '../icons/PreviewIcon.astro';
+import SourceIcon from '../icons/SourceIcon.astro';
+import BashIcon from '../icons/BashIcon.astro';
+import LinuxIcon from '../icons/LinuxIcon.astro';
+---
+
 <section id="projects" class="mb-10 section">
     <h2 class="text-gray-200 font-medium text-2xl text-left md:text-center mb-8 tracking-[.5rem]">PROJECTS</h2>
     <div class="flex flex-wrap justify-between">
-        <slot />
+        <ProjectCard title='PokéDex App' source={PokedexImage.src} description="Simple Pokedex application built using React. It utilizes the PokeAPI to fetch and display Pokémon information.">
+            <div slot="skills" class="flex flex-wrap mb-2">
+                <SkillPill color='bg-blue-500/30' skill="React">
+                    <ReactIcon class="w-4 h-4" />
+                </SkillPill>
+                <SkillPill color='bg-yellow-500/30' skill="JavaScript" >
+                    <JavaScriptIcon class="w-4 h-4"/>
+                </SkillPill>
+                <SkillPill color='bg-pink-500/30' skill="Vite" >
+                    <ViteIcon class="w-4 h-4" />
+                </SkillPill>	
+            </div>
+            <div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
+                <Button href="https://github.com/umigam3/pokedex-api" label="Source Code">
+                    <SourceIcon class="w-4 h-4"></SourceIcon>
+                </Button>
+                <Button href="https://pokeindex-app.netlify.app/" label="Preview">
+                    <PreviewIcon class="w-4 h-4"></PreviewIcon>
+                </Button>		
+            </div>
+        </ProjectCard>
+        <ProjectCard title='UNIX System Scripts' source={ScriptsImage.src} description="Collection of Bash scripts designed to enhance system administration and user management tasks on Unix-like systems.">
+            <div slot="skills" class="flex flex-wrap mb-2">
+                <SkillPill color='bg-slate-500/30' skill="Bash">
+                    <BashIcon class="w-4 h-4" />
+                </SkillPill>
+                <SkillPill color='bg-red-500/30' skill="Linux" >
+                    <LinuxIcon class="w-4 h-4" />
+                </SkillPill>	
+            </div>
+            <div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
+                <Button href="https://github.com/umigam3/unix-system-scripts" label="Source Code">
+                    <SourceIcon class="w-4 h-4"></SourceIcon>
+                </Button>
+            </div>
+        </ProjectCard>
+        <ProjectCard title='Developer Tools' source={AllToolsDevImage.src} description="A collection of coding tools designed to simplify developers lives and boost productivity.">
+            <div slot="skills" class="flex flex-wrap mb-2">
+                <SkillPill color='bg-slate-500/0' skill="Next JS" >
+                    <NextIcon class="w-4 h-4" />
+                </SkillPill>
+                <SkillPill color='bg-yellow-500/30' skill="Javascript">
+                    <JavaScriptIcon class="w-4 h-4" />
+                </SkillPill>	
+            </div>
+            <div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
+                <Button href="https://github.com/umigam3/dev-tools" label="Source Code">
+                    <SourceIcon class="w-4 h-4"></SourceIcon>
+                </Button>
+                <Button href="https://alltoolsdev.netlify.app/" label="Preview">
+                    <PreviewIcon class="w-4 h-4"></PreviewIcon>
+                </Button>
+            </div>
+        </ProjectCard>
     </div>
 </section>

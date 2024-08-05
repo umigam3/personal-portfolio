@@ -21,11 +21,12 @@ import PreviewIcon from '../icons/PreviewIcon.astro';
 import SourceIcon from '../icons/SourceIcon.astro';
 import BashIcon from '../icons/BashIcon.astro';
 import LinuxIcon from '../icons/LinuxIcon.astro';
+import TailwindIcon from '../icons/TailwindIcon.astro';
 ---
 
 <section id="projects" class="mb-10 section">
     <h2 class="text-gray-200 font-medium text-2xl text-left md:text-center mb-8 tracking-[.5rem]">PROJECTS</h2>
-    <div class="flex flex-wrap justify-between">
+    <div class="flex flex-col justify-between">
         <ProjectCard title='PokéDex App' source={PokedexImage.src} description="Simple Pokedex application built using React. It utilizes the PokeAPI to fetch and display Pokémon information.">
             <div slot="skills" class="flex flex-wrap mb-2">
                 <SkillPill color='bg-blue-500/30' skill="React">
@@ -69,6 +70,9 @@ import LinuxIcon from '../icons/LinuxIcon.astro';
                 </SkillPill>
                 <SkillPill color='bg-yellow-500/30' skill="Javascript">
                     <JavaScriptIcon class="w-4 h-4" />
+                </SkillPill>	
+                <SkillPill color='bg-blue-500/30' skill="Tailwind">
+                    <TailwindIcon class="w-4 h-4" />
                 </SkillPill>	
             </div>
             <div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">

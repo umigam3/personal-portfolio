@@ -1,0 +1,52 @@
+<section id="contact" class="mb-10 section relative">
+    <h2 class="text-gray-200 font-medium text-2xl text-left md:text-center mb-8 tracking-[.5rem] uppercase">Contact</h2>
+
+    <div>
+        <h2 class="opacity-70 text-xl uppercase font-bold tracking-[.5rem] mb-6">Email</h2>
+        <h3 class="hover:text-primary font-semibold text-2xl md:text-3xl mb-6"><a href="mailto:gerarddoncel41@gmail.com">gerarddoncel41@gmail.com</a></h3>
+        <hr class="opacity-70 mb-6 border-t-violet-500/50 border-r-[1px]">
+        <h2 class="opacity-70 text-xl uppercase font-bold tracking-[.5rem] mb-6">Phone</h2>
+        <h3 class="hover:text-primary font-semibold text-2xl md:text-3xl mb-6"><a class="mb-6" href="tel:+34636739799">+34 636 73 97 99</a></h3>
+        <hr class="opacity-70 mb-6 border-t-violet-500/50 border-r-[1px]">
+        <h2 class="opacity-70 text-xl uppercase font-bold tracking-[.5rem] mb-6">LinkedIn</h2>
+        <h3 class="hover:text-primary font-semibold text-2xl md:text-3xl md:mb-72"><a class="mb-6" target="_blank" href="https://www.linkedin.com/in/gerard-doncel-gutierrez/">LinkedIn profile page</a></h3>
+    </div>
+    <canvas class=" md:absolute -bottom-10 -right-0 -z-20"
+        id="cobe"
+        style="width: 500px; height: 500px"
+        width="1000"
+        height="1000"
+    >
+    </canvas>
+</section>
+
+<script type="module">
+    import createGlobe from 'https://cdn.skypack.dev/cobe'
+
+    let phi = 0
+    let canvas = document.getElementById("cobe")
+
+    const globe = createGlobe(canvas, {
+        devicePixelRatio: 2,
+        width: 1000,
+        height: 1000,
+        phi: 1,
+        theta: 0.5,
+        dark: 1,
+        diffuse: 0,
+        scale: 1,
+        mapSamples: 16000,
+        mapBrightness: 1,
+        baseColor: [1, 1, 1],
+        markerColor: [1, 0.5, 1],
+        glowColor: [1, 0.4, 1],
+        offset: [0, 0],
+        markers: [
+            { location: [40.7128, 0.000], size: 0.15 },
+        ],
+        onRender: (state) => {
+            state.phi = phi
+            phi += 0.003
+        },
+    })
+</script>

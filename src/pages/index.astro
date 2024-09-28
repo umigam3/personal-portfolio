@@ -11,14 +11,13 @@ import Contact from '../components/Contact.astro';
 
 <Layout>
 	<Header />
-	<main class="mx-auto flex flex-col max-w-6xl px-6 h-full overflow-hidden">
+	<main class="mx-auto flex flex-col max-w-6xl px-6 h-full">
 		<Hero />
 		<Experience />
 		<Projects />
 		<AboutMe />
-		<Contact />
-		<Footer />
 	</main>
+	<Footer />
 </Layout>
 
 <script>
@@ -38,9 +37,9 @@ import Contact from '../components/Contact.astro';
 			});
 
 			navLinks.forEach(link => {
-				link.classList.remove('text-secondary', 'scale-105', 'sm:opacity-100', 'font-semibold');
+				link.classList.remove('text-secondary', 'sm:opacity-100', 'font-semibold');
 				if (link.getAttribute('href') === `#${currentSection}`) {
-					link.classList.add('text-secondary', 'scale-105', 'sm:opacity-100', 'font-semibold');
+					link.classList.add('text-secondary', 'sm:opacity-100', 'font-semibold');
 				}
 			});
 		}

@@ -1,8 +1,15 @@
-<footer class="flex py-5 justify-between text-sm text-slate-400">
-    <span>© 2024 Gerard Doncel Gutiérrez</span>
-    <div>
-        <nav class="flex justify-center items-center gap-x-4">
-            <a class="hover:sm:text-secondary hover:sm:font-bold" href="#">Back to top</a>
-        </nav>
-    </div>
-</footer>
+---
+import Contact from "./Contact.astro"
+---
+
+<div class="mx-auto flex flex-col max-w-6xl px-6 h-full overflow-hidden">
+    <Contact />
+    <footer class="flex py-5 justify-between text-sm text-slate-400">
+        <span>© 2024 Gerard Doncel Gutiérrez</span>
+        <div>
+            <nav class="flex justify-center items-center gap-x-4">
+                <a class="opacity-70 duration-200 transform hover:sm:text-secondary hover:sm:opacity-100 hover:sm:font-semibold" href="#">Back to top</a>
+            </nav>
+        </div>
+    </footer>
+</div>

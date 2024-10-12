@@ -13,6 +13,7 @@ import CssIcon from '../icons/CSSIcon.astro';
 import WordPressIcon from '../icons/WordPressIcon.astro';
 import SqlIcon from '../icons/SQLIcon.astro';
 import GitIcon from '../icons/GitIcon.astro';
+import LaravelIcon from '../icons/LaravelIcon.astro';
 ---
 
 
@@ -21,12 +22,42 @@ import GitIcon from '../icons/GitIcon.astro';
     <div class="relative h-full">
         <div class="absolute ml-2 md:ml-0 left-0 top-4 md:left-1/2 w-[2px] bg-secondary transform -translate-x-1/2 h-full"></div>
         <ExperienceCard 
-            date="Jan 2023 - Present"
-            position="Full Stack Developer"
-            company="3&Punt"
-            description="Developing quality Moodle plugins and integrations. Utilizing technologies to enhance the Moodle e-learning experience. Collaborating with clients, I analyze requirements to craft optimal solutions and ensure smooth integration."
+            date="Oct 2024 - Present"
+            position="Backend Developer"
+            company="eAgora"
+            description="Enter description here..."
             side="left"> 
             <div class="flex flex-wrap justify-start md:justify-end">
+                <SkillPill color='bg-red-500/30' skill="Laravel">
+                    <LaravelIcon class="w-4 h-4"/>
+                </SkillPill>
+                <SkillPill color='bg-indigo-500/30' skill="PHP">
+                    <PhpIcon class="w-4 h-4"/>
+                </SkillPill>
+                <SkillPill color='bg-yellow-500/30' skill="JavaScript" >
+                    <JavaScriptIcon class="w-4 h-4"/>
+                </SkillPill>
+                <SkillPill color='bg-orange-500/30' skill="HTML" >
+                    <HtmlIcon class="w-3 h-4"/>
+                </SkillPill>
+                <SkillPill color='bg-sky-500/30' skill="CSS">
+                    <CssIcon class="w-3 h-4"></Css>
+                </SkillPill>
+                <SkillPill color='bg-slate-500/30' skill="MySQL" >
+                    <SqlIcon class="w-4 h-4"/>
+                </SkillPill>
+                <SkillPill color='bg-amber-500/30' skill="Git" >
+                    <GitIcon class="w-4 h-4"/>
+                </SkillPill>
+            </div>
+        </ExperienceCard>
+        <ExperienceCard 
+            date="Jan 2023 - Oct 2024"
+            position="Web Developer"
+            company="3&Punt"
+            description="Developing quality Moodle plugins and integrations. Utilizing technologies to enhance the Moodle e-learning experience. Collaborating with clients, I analyze requirements to craft optimal solutions and ensure smooth integration."
+            side="right"> 
+            <div class="flex flex-wrap justify-start md:justify-start">
                 <SkillPill color='bg-indigo-500/30' skill="PHP">
                     <PhpIcon class="w-4 h-4"/>
                 </SkillPill>
@@ -52,8 +83,8 @@ import GitIcon from '../icons/GitIcon.astro';
             position="Web Developer"
             company="Namastech"
             description="Fixing general bugs of their web application. (4DMOVIN) Development of small tools to imporve web utility. Building WordPress sites, including landing pages, working with woo-commerce."
-            side="right">
-            <div class="flex flex-wrap justify-start">
+            side="left">
+            <div class="flex flex-wrap justify-end">
                 <SkillPill color='bg-indigo-500/30' skill="PHP">
                     <PhpIcon class="w-4 h-4" />
                 </SkillPill>

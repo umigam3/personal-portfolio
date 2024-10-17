@@ -26,7 +26,7 @@ import TailwindIcon from '../icons/TailwindIcon.astro';
 
 <section id="projects" class="mb-10 section max-w-6xl mx-auto w-full">
     <h2 class="text-gray-200 font-medium text-2xl text-left md:text-center mb-8 tracking-[.5rem]">PROJECTS</h2>
-    <div class="flex flex-col justify-between">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 ">
         <ProjectCard title='PokéDex App' source={PokedexImage.src} description="Simple Pokedex application built using React. It utilizes the PokeAPI to fetch and display Pokémon information.">
             <div slot="skills" class="flex flex-wrap mb-2">
                 <SkillPill color='bg-blue-500/30' skill="React">
@@ -60,27 +60,6 @@ import TailwindIcon from '../icons/TailwindIcon.astro';
             <div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
                 <Button href="https://github.com/umigam3/unix-system-scripts" label="Source Code">
                     <SourceIcon class="w-4 h-4"></SourceIcon>
-                </Button>
-            </div>
-        </ProjectCard>
-        <ProjectCard title='Developer Tools' source={AllToolsDevImage.src} description="A collection of coding tools designed to simplify developers lives and boost productivity.">
-            <div slot="skills" class="flex flex-wrap mb-2">
-                <SkillPill color='bg-slate-500/0' skill="Next JS" >
-                    <NextIcon class="w-4 h-4" />
-                </SkillPill>
-                <SkillPill color='bg-yellow-500/30' skill="Javascript">
-                    <JavaScriptIcon class="w-4 h-4" />
-                </SkillPill>	
-                <SkillPill color='bg-blue-500/30' skill="Tailwind">
-                    <TailwindIcon class="w-4 h-4" />
-                </SkillPill>	
-            </div>
-            <div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
-                <Button href="https://github.com/umigam3/dev-tools" label="Source Code">
-                    <SourceIcon class="w-4 h-4"></SourceIcon>
-                </Button>
-                <Button href="https://alltoolsdev.netlify.app/" label="Preview">
-                    <PreviewIcon class="w-4 h-4"></PreviewIcon>
                 </Button>
             </div>
         </ProjectCard>

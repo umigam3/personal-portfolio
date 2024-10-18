@@ -11,42 +11,4 @@
         <h2 class="opacity-70 text-xl uppercase font-bold tracking-[.5rem] mb-6">LinkedIn</h2>
         <h3 class="hover:text-primary font-semibold text-2xl md:text-3xl mb-12 sm:mb-40"><a class="mb-6" target="_blank" href="https://www.linkedin.com/in/gerard-doncel-gutierrez/">LinkedIn profile page</a></h3>
     </div>
-    <canvas class="opacity-40 absolute -bottom-48 -right-0 -z-10"
-        id="cobe"
-        style="width: 500px; height: 500px"
-        width="1000"
-        height="1000"
-    >
-    </canvas>
 </section>
-
-<script type="module">
-    import createGlobe from 'https://cdn.skypack.dev/cobe'
-
-    let phi = 0
-    let canvas = document.getElementById("cobe")
-
-    const globe = createGlobe(canvas, {
-        devicePixelRatio: 2,
-        width: 1000,
-        height: 1000,
-        phi: 1,
-        theta: 0.5,
-        dark: 1,
-        diffuse: 0,
-        scale: 1.25,
-        mapSamples: 16000,
-        mapBrightness: 1,
-        baseColor: [1, 1, 1],
-        markerColor: [1, 0.4, 1],
-        glowColor: [14/255, 11/255, 37/255],
-        offset: [0, 0],
-        markers: [
-            { location: [40.7128, 0.000], size: 0.15 },
-        ],
-        onRender: (state) => {
-            state.phi = phi
-            phi += 0.003
-        },
-    })
-</script>

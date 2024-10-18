@@ -1,14 +1,23 @@
 ---
+// Icons
 import LinkedInIcon from "@icons/LinkedInIcon.astro"
 import GitHubIcon from "@icons/GitHubIcon.astro"
 import ResumeIcon from "@icons/ResumeIcon.astro"
+
+// UI
 import Button from "@UI/Button.astro"
+
+// Images
+import HeroImage from "@img/hero.webp"
+
+// Files
+import SpanishCV from "@file/cv-resume-es.pdf"
 ---
 
 <section id="hero" class="md:pt-12 pt-4 max-w-6xl mx-auto w-full">
     <div class="relative flex flex-col mb-8 lg:mb-52">
         <div class="animate-slidein lg:absolute flex justify-center lg:pl-10 lg:pb-4 lg:py-0 right-3 top-0">
-            <img class=" z-10 w-80 md:w-[485px] hero-image " src="hero.webp" alt="Gerard Doncel">      
+            <img class="z-10 w-80 md:w-[485px] hero-image " src={HeroImage.src} alt="Gerard Doncel">      
         </div>  
         <div class="w-full lg:w-3/4 flex flex-col justify-center lg:mt-0 -mt-14 md:z-10">
             <h1 class="animate-slidein lg:animate-none md:leading-tight md:text-6xl text-4xl font-extrabold bg-gradient-to-r text-c mb-4 text-primary">
@@ -26,7 +35,7 @@ import Button from "@UI/Button.astro"
                 <Button href="https://github.com/umigam3" label="GitHub">
                     <GitHubIcon class="w-5 h-5" color="#FFF"/>
                 </Button>
-                <Button href="cv-resume-es.pdf" label="Resume">
+                <Button href={SpanishCV} label="Resume">
                     <ResumeIcon class="w-5 h-5" color="#FFF"/>
                 </Button>
             </div>

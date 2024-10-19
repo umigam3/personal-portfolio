@@ -1,0 +1,19 @@
+---
+import BackIcon from "@icons/BackIcon.astro"
+import Button from "@UI/Button.astro"
+---
+
+<div class="flex justify-center items-center h-full">
+    <div class="flex flex-col">
+        <h1 class="animate-slidein lg:animate-none md:leading-tight md:text-6xl text-4xl font-extrabold bg-gradient-to-r text-c mb-4 text-primary">
+            <span class="lg:opacity-0 lg:animate-slidein inline lg:block">Thank you for your message!</span>
+            <span class="lg:opacity-0 lg:animate-slidein100 inline lg:block">I will respond</span>
+            <span class="lg:opacity-0 lg:animate-slidein200 text-secondary font-extrabold inline lg:block">as soon as possible!</span>
+        </h1>
+        <div class="flex">
+            <Button href="/" label="Go back">
+                <BackIcon class="w-5 h-5" color="#FFF"/>
+            </Button>    
+        </div>
+    </div>
+</div>

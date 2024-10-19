@@ -5,12 +5,13 @@ const submitButton = document.getElementById(
 
 form.addEventListener("submit", (e: Event) => {
   Array.from(form.elements).forEach((element) => {
-    (element as HTMLInputElement).disabled = true;
+    element.setAttribute("readonly", "readonly");
     element.classList.add("cursor-not-allowed");
     element.classList.add("opacity-80");
   });
 
-  submitButton.innerHTML = "Sending ...";
+  submitButton.innerHTML = "Sending...";
+  submitButton.disabled = true;
   submitButton.classList.add("cursor-not-allowed");
   submitButton.classList.add("opacity-80");
 });

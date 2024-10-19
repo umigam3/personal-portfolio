@@ -8,8 +8,9 @@
       "@UI/*": ["src/components/UI/*"],
       "@icons/*": ["src/icons/*"],
       "@img/*": ["src/assets/img/*"],
-      "@file/*": ["src/assets/files/*"],
-      "@scripts/*": ["src/scripts/*"]
+      "@files/*": ["src/assets/files/*"],
+      "@scripts/*": ["src/scripts/*"],
+      "@styles/*": ["src/styles/*"]
     }
   }
 }

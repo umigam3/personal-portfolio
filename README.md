@@ -23,7 +23,7 @@ This portfolio serves as a digital resume and project gallery, helping others le
 ## 📂 Project Structure
 
 ├── public # Static assets like images and icons  
-├── src S
+├── src  
 │ ├── components # Reusable UI components  
 │ ├── layouts # Layout templates  
 │ ├── pages # Portfolio pages  

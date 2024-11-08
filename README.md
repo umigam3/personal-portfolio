@@ -40,12 +40,6 @@ To set up the project locally:
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
 
-## 🚧 Roadmap
-
-- [ ] Add more portfolio projects
-- [ ] Implement a contact form
-- [ ] Optimize for SEO
-
 ## 📝 License
 
 This project is licensed under the MIT License.
